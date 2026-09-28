@@ -39,11 +39,11 @@ make run NAME=App DEBUG=0
 ---
 
 ## Project structure
-
+Didn't you fucking get it? Look here!
 ```text
 .
 ├── Makefile
 ├── objs/
 └── src/
-    └── main.c
+    └── main.c # s
 ```
