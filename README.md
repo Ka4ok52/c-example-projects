@@ -1,5 +1,5 @@
 # C Example Projects
-
+[![C Build & Test](https://github.com/Ka4ok52/c-example-projects/actions/workflows/build.yml/badge.svg)](https://github.com/Ka4ok52/c-example-projects/actions/workflows/build.yml) \
 A project with examples of using `make`. \
 > **Important:**
 > 1. Run `make` from the project root! \
