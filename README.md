@@ -45,5 +45,5 @@ Didn't you fucking get it? Look here!
 ├── Makefile
 ├── objs/
 └── src/
-    └── main.c # s
+    └── main.c
 ```
