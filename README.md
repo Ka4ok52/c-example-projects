@@ -1,9 +1,10 @@
 # C Example Projects
-[![C Build & Test](https://github.com/Ka4ok52/c-example-projects/actions/workflows/build.yml/badge.svg)](https://github.com/Ka4ok52/c-example-projects/actions/workflows/build.yml) \
-A project with examples of using `make`. \
+[![C Build & Test](https://github.com/Ka4ok52/c-example-projects/actions/workflows/build.yml/badge.svg)](https://github.com/Ka4ok52/c-example-projects/actions/workflows/build.yml)
+
+A project with examples of using `make`.
 > **Important:**
-> 1. Run `make` from the project root! \
-> 2. If you want to compile the example, move the source code to the `src` directory, as that is where `make` gathers the template code from! \
+> 1. Run `make` from the project root!
+> 2. If you want to compile the example, move the source code to the `src` directory, as that is where `make` gathers the template code from!
 > 3. Run `make clean` before building with other flags!
 
 ---
