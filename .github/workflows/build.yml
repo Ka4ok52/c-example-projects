@@ -1,0 +1,27 @@
+name: C Build & Test
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Build Debug
+      run: make build
+
+    - name: Run Application
+      run: make run
+
+    - name: Clean build
+      run: make clean
+
+    - name: Build Release
+      run: make build DEBUG=0 NAME=ReleaseApp
