@@ -1,9 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void) {
-    #ifdef DEBUG
-        printf("\n[DEBUG] DEBUG Actived...\n");
-    #endif
+int main(void){
     printf("This program on C!\n");
-    return 0;
+    return EXIT_SUCCESS;
 }
