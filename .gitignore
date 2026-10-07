@@ -55,6 +55,9 @@ dkms.conf
 *.dwo
 
 # CORE
-/Main
+# Name programm in root (rename if touch Makefile NAME)
+/out
+# object file
 /objs
+# lmao
 /example/bin

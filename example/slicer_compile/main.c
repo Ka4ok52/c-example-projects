@@ -1,20 +1,21 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 int slice(const char *str, size_t len) {
-    if (str == NULL || len == 0) {
+
+    if (str == NULL) {
         return 1;
     }
-    size_t str_len = 0;
-    for (size_t i = 0; i < len; i++) {
-        if (str[i] == '\0') {
-            break;
-        } else {
-            printf("%c", str[i]);
-            str_len++;
-        }
+    if(len == 0) {
+        printf("This string empty!\n");
+        return 0;
     }
-    printf("\n");
-    printf("%zu\n", str_len);
+    size_t str_len = 0;
+    while (str_len < len && str[str_len] != '\0') {
+        str_len++;
+    }
+    fwrite(str, 1, str_len, stdout);
+    printf("\n%zu\n", str_len);
     return 0;
 }
 
@@ -24,5 +25,5 @@ int main(void) {
 
     slice(str, sizeof(str));
 
-    return 0;
+    return EXIT_SUCCESS;
 }

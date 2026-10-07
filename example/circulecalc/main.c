@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
@@ -62,5 +63,5 @@ int main(void) {
     printf("%s : %.3f\n", status[1], dia);
     printf("%s : %.3f\n", status[2], line);
     printf("%s : %.3f\n", status[3], square);
-    return 0;
+    return EXIT_SUCCESS;
 }

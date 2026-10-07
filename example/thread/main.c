@@ -1,4 +1,6 @@
 #define _GNU_SOURCE
+
+#include <stdlib.h>
 #include <stdio.h>
 #include <pthread.h>
 #include <sched.h>
@@ -17,7 +19,7 @@ int main(void) {
     pthread_t thread_id;
     pthread_create(&thread_id, NULL, thread_func_1, NULL);
     int cpu_id = sched_getcpu();
-    printf("this thread on CPU # #%d\n", cpu_id);
+    printf("this thread on CPU #%d\n", cpu_id);
     pthread_join(thread_id, NULL);
-    return 0;
+    return EXIT_SUCCESS;
 }

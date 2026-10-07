@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "add.h"
 
@@ -7,5 +8,5 @@ int main(void) {
     #endif
     int res = add(5, 3);
     printf("Result: %d\n", res);
-    return 0;
+    return EXIT_SUCCESS;
 }

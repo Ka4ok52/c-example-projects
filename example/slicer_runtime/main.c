@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -23,5 +24,5 @@ int main(void) {
 
     slice(str, strlen(str));
 
-    return 0;
+    return EXIT_SUCCESS;
 }

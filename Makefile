@@ -1,6 +1,6 @@
-NAME    ?= Main
+NAME    ?= out
 CC      ?= gcc
-CFLAGS  ?= -Wall -Wextra -std=c11
+CFLAGS  ?= -Wall -Wextra -std=c11 -MMD -MP
 LDLIBS  := -lm -pthread
 # default source
 SRC_DIR := src
@@ -8,6 +8,7 @@ OBJ_DIR := objs
 SRC     := $(wildcard $(SRC_DIR)/*.c)
 # src/main.c > objs/main.o
 OBJ     := $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
+DEPS    := $(OBJ:.o=.d)
 # for DEBUG by default 1
 DEBUG ?= 1
 ifeq ($(DEBUG),1)
@@ -23,7 +24,7 @@ all: build
 build: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $@ $(LDLIBS)
+	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDLIBS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -36,3 +37,5 @@ run: build
 
 clean:
 	rm -rf $(OBJ_DIR) $(NAME)
+
+-include $(DEPS)

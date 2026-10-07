@@ -49,5 +49,5 @@ int main(void) {
         printf("SP by limited : %.2f MB\n", (double)limit.rlim_cur / (1024.0 * 1024.0));
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

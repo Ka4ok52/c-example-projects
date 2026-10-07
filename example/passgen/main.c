@@ -10,7 +10,7 @@ int main(void) {
     unsigned int seed;
     char seed_buf[32];
 
-    const char charset[] =
+    const char charset[81] =
         "abcdefghijklmnopqrstuvwxyz"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         "01234563456789"
@@ -46,7 +46,7 @@ int main(void) {
     srand(seed);
 
     printf("Seed: %u\n", seed);
-    printf("Password: "); 
+    printf("Password: ");
 
     for (int i = 0; i < length; i++) {
         int random_index = rand() % charset_len;
@@ -54,5 +54,5 @@ int main(void) {
     }
     printf("\n");
 
-    return 0;
+    return EXIT_SUCCESS;
 }
